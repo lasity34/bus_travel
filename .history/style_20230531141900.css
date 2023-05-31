@@ -154,15 +154,6 @@ input[type="checkbox"] {
 }
 
 .calculation_display div {
-    width: 40%;
-    height: 20px;
-    background-color: rgb(166, 169, 169);
+    background-color: aqua;
     align-self: center;
-    border-radius: 5px;
-    text-align: center;
-    padding: 0.2em;
-}
-
-.calculation_display div span {
-    font-size: 1.2rem;
 }

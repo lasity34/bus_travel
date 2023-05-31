@@ -14,35 +14,17 @@ function bus_travel() {
     const selected_time = document.querySelector('input[name="time"]:checked').value;
     bus_instance.peak_times(selected_time)
     bus_instance.points_input(points_input_value)
-    bus_instance.returned_checked(checkbox.checked)
     bus_instance.bus_location(location_select.value)
-
-    if (checkbox.checked) {
-        price_per_single_trip_display.style.display = "none";
-        price_per_return_trip_display.style.display = "block";
-        single_trips_display.style.display = "none";
-        return_trips_display.style.display = "block";
-    } else {
-        price_per_single_trip_display.style.display = "block";
-        price_per_return_trip_display.style.display = "none";
-        single_trips_display.style.display = "block";
-        return_trips_display.style.display = "none";
-    }
-    
-
-
+    bus_instance.returned_checked(checkbox.checked)
     single_trips_display.innerHTML = bus_instance.number_trips()
     price_per_single_trip_display.innerHTML = bus_instance.price_per_single_trip()
-    return_trips_display.innerHTML = bus_instance.number_return_trips();
-    price_per_return_trip_display.innerHTML = bus_instance. price_per_return_trip()
+    return_trips_display.innerHTML = bus_instance.number_return_trips()
 }
 function bus_location() {
     const selected_value = this.value
     bus_instance.bus_location(selected_value)
  
 }
-
-
 
 location_select.addEventListener("change", bus_location)
 

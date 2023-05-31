@@ -158,9 +158,6 @@ input[type="checkbox"] {
     height: 20px;
     background-color: rgb(166, 169, 169);
     align-self: center;
-    border-radius: 5px;
-    text-align: center;
-    padding: 0.2em;
 }
 
 .calculation_display div span {
