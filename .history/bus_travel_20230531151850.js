@@ -1,11 +1,3 @@
-// Create references
-// Create function fir the bus travel
-// in bus travel Create instance for points input
-// place instance for buslocation, returnchecked, peak times in bus travel function
-// Create check condition to either show single or returned trips
-// Create function for bus to change location values
-// Create event listeners for calculate btn and for locations that are changing
-
 
 const points_value = document.querySelector("#points")
 const calculate_btn = document.querySelector(".calculate_btn")
@@ -39,9 +31,9 @@ function bus_travel() {
     
 
 
-    single_trips_display.innerHTML = bus_instance.number_trips()
+    single_trips_display.innerHTML = `R${bus_instance.number_trips()}`
     price_per_single_trip_display.innerHTML = `R${bus_instance.price_per_single_trip()}`
-    return_trips_display.innerHTML = bus_instance.number_return_trips()
+    return_trips_display.innerHTML = `R${bus_instance.number_return_trips()}`;
     price_per_return_trip_display.innerHTML = `R${bus_instance. price_per_return_trip()}`
 }
 function bus_location() {
