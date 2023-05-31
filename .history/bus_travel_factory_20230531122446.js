@@ -37,16 +37,15 @@ function bus_travel_factory() {
         } else if (input === 'pinelands') {
             location = 'pinelands'
             reduction = 15
-        } 
-         if (input === 'select_location') {
+        } else if (input === 'select_location') {
             location = 'select_location'
-            number_of_trips = 0
+            reduction = 0
         }
 
         if (peak) {
             reduction = reduction * 1.25
         }
-    
+        console.log(reduction)
         number_of_trips = Math.floor(points / reduction)
       
     }

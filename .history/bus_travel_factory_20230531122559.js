@@ -46,7 +46,7 @@ function bus_travel_factory() {
         if (peak) {
             reduction = reduction * 1.25
         }
-    
+        console.log(reduction)
         number_of_trips = Math.floor(points / reduction)
       
     }

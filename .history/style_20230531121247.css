@@ -135,19 +135,9 @@ input[type="checkbox"] {
 .display_title {
     display: flex;
     justify-content: center;
-    margin-top: 2em;
 }
 
 .display_title img {
     align-self: center;
     margin-right: 1em;
-}
-
-.display_title h2 {
-    text-decoration: underline;
-}
-
-.calculation_display {
-    display: flex;
-    justify-content: space-between;
 }

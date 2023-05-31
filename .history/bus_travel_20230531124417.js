@@ -17,7 +17,7 @@ function bus_location() {
     const selected_value = this.value
  
     bus_instance.bus_location(selected_value)
- 
+    single_trips_display.innerHTML = bus_instance.number_trips();
 }
 
 location_select.addEventListener("change", bus_location)
