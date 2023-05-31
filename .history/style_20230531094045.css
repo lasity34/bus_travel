@@ -1,0 +1,11 @@
+
+
+.widget_container {
+   margin: 0 auto;
+    background-color: rgb(171, 126, 213);
+    width: 70%;
+}
+
+header {
+    display: flex;
+}

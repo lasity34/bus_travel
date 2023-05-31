@@ -1,0 +1,48 @@
+
+
+describe('This will test all logic for the bus widget', function() {
+    it('This will test the points input', function() {
+        const bus_travel = bus_travel_factory()
+
+        bus_travel.points_input(40)
+
+        assert.equal(40, bus_travel.points_value())
+
+    })
+
+    it('This will test location value for when the select location value', function() {
+        const bus_travel = bus_travel_factory()
+
+        bus_travel.bus_location("select_location")
+
+        assert.equal("select_location", bus_travel.location_return())
+
+    })
+
+    it('This will test location value for Milnerton', function() {
+        const bus_travel = bus_travel_factory()
+
+        bus_travel.bus_location("milnerton")
+
+        assert.equal("milnerton", bus_travel.location_return())
+
+    })
+
+    it('This will test location value for Pinelands', function() {
+        const bus_travel = bus_travel_factory()
+
+        bus_travel.bus_location("pinelands")
+
+        assert.equal("pinelands", bus_travel.location_return())
+
+    })
+
+    it('This will test location value for Atlantis', function() {
+        const bus_travel = bus_travel_factory()
+
+        bus_travel.bus_location("atlantis")
+
+        assert.equal("atlantis", bus_travel.location_return())
+
+    })
+})

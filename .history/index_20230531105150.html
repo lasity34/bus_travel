@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./style.css" rel="stylesheet" />
+    <title>Bus travel</title>
+  </head>
+  <body>
+    <div class="widget_container">
+      <header>
+        <img src="./images/bus.png" width="30" height="30" />
+        <h2>Bus Travel Widget</h2>
+      </header>
+      <section>
+        <div class="points_container">
+          <label for="points">Points:</label>
+          <input
+            type="number"
+            name="points"
+            id="points"
+            placeholder="Enter Points"
+          />
+        </div>
+        <div class="start_location_container">
+          <label for="dropdown">Start Location:</label>
+          <select id="dropdown" name="dropdown">
+            <option value="select_location">Select Start Location</option>
+            <option value="atlantis">Atlantis</option>
+            <option value="pinelands">Pinelands</option>
+            <option value="milnerton">Milnerton</option>
+          </select>
+        </div>
+      </section>
+      <section class="calculate_container">
+        <div class="calculate_title">
+            <img src="./images/bus_time.png" width="30" height="30" />
+            <h4>Travel Times:</h4>
+        </div>
+      </section>
+      <button class="calculate_btn">calculate</button>
+      <script src="./bus_travel_factory.js"></script>
+      <script src="./bus_travel.js"></script>
+    </div>
+  </body>
+</html>
