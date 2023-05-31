@@ -9,8 +9,6 @@ const bus_instance = bus_travel_factory()
 
 function bus_travel() {
     const points_input_value = points_value.value
-    const selected_time = document.querySelector('input[name="time"]:checked').value;
-    bus_instance.peak_times(selected_time)
     bus_instance.points_input(points_input_value)
     bus_instance.bus_location(location_select.value)
     single_trips_display.innerHTML = bus_instance.number_trips()

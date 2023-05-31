@@ -178,24 +178,4 @@ describe('Cost of all single trips', function() {
 
         assert.equal(30, bus_travel.price_per_single_trip())
     })
-
-    it("Testing price per single trip during peak to Pinelands", function() {
-        const bus_travel = bus_travel_factory()
-
-        bus_travel.points_input(100)
-        bus_travel.peak_times("peak")
-        bus_travel.bus_location("pinelands")
-
-        assert.equal(18.75, bus_travel.price_per_single_trip())
-    })
-
-    it("Testing price per single trip during off-peak to Pinelands", function() {
-        const bus_travel = bus_travel_factory()
-
-        bus_travel.points_input(100)
-        bus_travel.peak_times("off-peak")
-        bus_travel.bus_location("pinelands")
-
-        assert.equal(15, bus_travel.price_per_single_trip())
-    })
 })

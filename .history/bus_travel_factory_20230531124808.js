@@ -48,7 +48,7 @@ function bus_travel_factory() {
             reduction = reduction * 1.25
         }
 
-        price_single_trip = reduction
+        price_single_trip += reduction
     
         number_of_trips = Math.floor(points / reduction)
       
