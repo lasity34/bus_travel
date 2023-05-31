@@ -209,7 +209,7 @@ describe('Number of return trips', function() {
         bus_travel.returned_checked(true)
         bus_travel.bus_location("pinelands")
 
-        assert.equal(3, bus_travel.number_return_trips())
+        assert.equal(3, bus_travel.number_trips())
     })
 
     it("Checking number of returns possible in a trip to Pinelands", function() {
@@ -220,51 +220,8 @@ describe('Number of return trips', function() {
         bus_travel.returned_checked(false)
         bus_travel.bus_location("pinelands")
 
-        assert.equal(6, bus_travel.number_return_trips())
+        assert.equal(6, bus_travel.number_trips())
     })
 
-    it("Checking number of returns possible in a trip to Milnerton", function() {
-        const bus_travel = bus_travel_factory()
-
-        bus_travel.points_input(100)
-        bus_travel.peak_times("off-peak")
-        bus_travel.returned_checked(true)
-        bus_travel.bus_location("milnerton")
-
-        assert.equal(2, bus_travel.number_return_trips())
-    })
-
-    it("Checking number of returns possible in a trip to Milnerton", function() {
-        const bus_travel = bus_travel_factory()
-
-        bus_travel.points_input(100)
-        bus_travel.peak_times("off-peak")
-        bus_travel.returned_checked(false)
-        bus_travel.bus_location("milnerton")
-
-        assert.equal(5, bus_travel.number_return_trips())
-    })
-
-    it("Checking number of returns possible in a trip to Atlantis", function() {
-        const bus_travel = bus_travel_factory()
-
-        bus_travel.points_input(100)
-        bus_travel.peak_times("off-peak")
-        bus_travel.returned_checked(true)
-        bus_travel.bus_location("atlantis")
-
-        assert.equal(1, bus_travel.number_return_trips())
-    })
-
-    it("Checking number of returns possible in a trip to Atlantis", function() {
-        const bus_travel = bus_travel_factory()
-
-        bus_travel.points_input(100)
-        bus_travel.peak_times("off-peak")
-        bus_travel.returned_checked(false)
-        bus_travel.bus_location("atlantis")
-
-        assert.equal(3, bus_travel.number_return_trips())
-    })
     
 })

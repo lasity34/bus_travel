@@ -14,13 +14,13 @@ function bus_travel() {
     bus_instance.peak_times(selected_time)
     bus_instance.points_input(points_input_value)
     bus_instance.bus_location(location_select.value)
-    bus_instance.returned_checked(checkbox.checked)
     single_trips_display.innerHTML = bus_instance.number_trips()
     price_per_single_trip_display.innerHTML = bus_instance.price_per_single_trip()
-    return_trips_display.innerHTML = bus_instance.number_return_trips()
+   return_trips_display.innerHTML = bus_instance.number_return_trips()
 }
 function bus_location() {
     const selected_value = this.value
+ 
     bus_instance.bus_location(selected_value)
  
 }

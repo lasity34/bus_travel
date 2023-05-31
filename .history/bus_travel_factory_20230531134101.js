@@ -87,9 +87,7 @@ function bus_travel_factory() {
     return price_single_trip;
   }
 
-  function price_per_return_trip() {
-    return price_return_trip
-  }
+  function price_per_return_trip()
 
   return {
     points_input,
@@ -101,6 +99,5 @@ function bus_travel_factory() {
     price_per_single_trip,
     returned_checked,
     number_return_trips,
-    price_per_return_trip
   };
 }

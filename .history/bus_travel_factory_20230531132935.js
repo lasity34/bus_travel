@@ -14,7 +14,6 @@ function bus_travel_factory() {
   let price_single_trip = 0;
   let return_trip = false;
   let number_of_return_trips = 0;
-  let price_return_trip = 0
 
   function points_input(input) {
     points = input;
@@ -60,7 +59,7 @@ function bus_travel_factory() {
     number_of_trips = Math.floor(points / reduction);
     price_single_trip = reduction;
     if (return_trip) {
-      price_return_trip *= 2;
+      price_single_trip *= 2;
       number_of_return_trips = Math.floor(points / (reduction * 2));
     } else {
       number_of_return_trips = Math.floor(points / reduction);
@@ -87,10 +86,6 @@ function bus_travel_factory() {
     return price_single_trip;
   }
 
-  function price_per_return_trip() {
-    return price_return_trip
-  }
-
   return {
     points_input,
     points_value,
@@ -101,6 +96,5 @@ function bus_travel_factory() {
     price_per_single_trip,
     returned_checked,
     number_return_trips,
-    price_per_return_trip
   };
 }

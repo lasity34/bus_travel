@@ -101,6 +101,5 @@ function bus_travel_factory() {
     price_per_single_trip,
     returned_checked,
     number_return_trips,
-    price_per_return_trip
   };
 }

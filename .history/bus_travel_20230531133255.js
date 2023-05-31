@@ -5,7 +5,7 @@ const location_select = document.querySelector("#dropdown")
 const single_trips_display = document.querySelector("#number_single_trips")
 const price_per_single_trip_display = document.querySelector("#price_per_single_trip")
 const checkbox = document.querySelector('input[name="return"]');
-const return_trips_display = document.querySelector("#number_return_trips")
+
 const bus_instance = bus_travel_factory()
 
 function bus_travel() {
@@ -14,13 +14,13 @@ function bus_travel() {
     bus_instance.peak_times(selected_time)
     bus_instance.points_input(points_input_value)
     bus_instance.bus_location(location_select.value)
-    bus_instance.returned_checked(checkbox.checked)
     single_trips_display.innerHTML = bus_instance.number_trips()
     price_per_single_trip_display.innerHTML = bus_instance.price_per_single_trip()
-    return_trips_display.innerHTML = bus_instance.number_return_trips()
+    console.log(checkbox.checked)
 }
 function bus_location() {
     const selected_value = this.value
+ 
     bus_instance.bus_location(selected_value)
  
 }
